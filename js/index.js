@@ -45,36 +45,39 @@ logo.setAttribute('src', siteContent["nav"]["img-src"])
 const title = document.querySelector('title')
 title.textContent = 'Great Idea!'
 
-//nav and <a>
+//header, nav, and <a>
 const navLinks1 = document.querySelector('a')
 const navLinks2 = navLinks1.nextElementSibling
 const navLinks3 = navLinks2.nextElementSibling
 const navLinks4 = navLinks3.nextElementSibling
 const navLinks5 = navLinks4.nextElementSibling
 const navLinks6 = navLinks5.nextElementSibling
+let navImg = document.querySelector('img')
+
 navLinks1.textContent = 'Services'
 navLinks2.textContent = 'Product'
 navLinks3.textContent = 'Vision'
 navLinks4.textContent = 'Features'
 navLinks5.textContent = 'About'
 navLinks6.textContent = 'Contact'
+navImg.src = "img/logo.png" 
 
-//logo img
-const logoImg = document.querySelector('#logo-img')
-logoImg.src('img\logo.png')
 
-//.cta-text
-const ctaSection = document.querySelector('.cta')
-const firstH1 = ctaSection.querySelector('h1')
-const firstButton = ctaSection.querySelector('button')
+//cta section
+let cta = document.querySelector('.cta')
+let ctaH1 = cta.querySelector('h1')
+let ctaButtonText = cta.querySelector('button')
+let ctaImage = cta.querySelector('img')
 
-firstH1.textContent ='Test'
-firstButton.textContent = 'Get Started'
+ctaH1Content = "Dom Is Awesome"
+ctaH1.textContent = ctaH1Content
+ctaButtonText.innerText = 'Get Started'
 
-//cta img
-const ctaImg = document.querySelector("#cta-img")
-ctaImg.src('img\header-img.png')
+//cta image
+let ctaImg = cta.querySelector('img')
+ctaImg.src = "img/header-img.png"
 
+//main-content
 
 
 
