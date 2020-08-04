@@ -62,6 +62,23 @@ navLinks5.textContent = 'About'
 navLinks6.textContent = 'Contact'
 navImg.src = "img/logo.png" 
 
+//add nav items
+const newNavLink1 = document.createElement('a')  
+newNavLink1.textContent = 'Google'                
+newNavLink1.href = 'www.google.com'                          
+const nav = document.querySelector('nav')    
+nav.appendChild(newNavLink1) //add new a to nav bars
+
+const newNavLink2 = document.createElement('a')  
+newNavLink2.textContent = 'Bing'                
+newNavLink2.href = 'www.bing.com'                          
+nav.appendChild(newNavLink2) 
+
+// nav color
+let navSelector = document.querySelectorAll('a')
+for(let i = 0; i < navSelector.length; i++){
+  navSelector[i].style.color = "green"
+}
 
 //cta section
 let cta = document.querySelector('.cta')
@@ -69,8 +86,7 @@ let ctaH1 = cta.querySelector('h1')
 let ctaButtonText = cta.querySelector('button')
 let ctaImage = cta.querySelector('img')
 
-ctaH1Content = "Dom Is Awesome"
-ctaH1.textContent = ctaH1Content
+ctaH1.innerHTML = "Dom <br> Is <br> Awesome"
 ctaButtonText.innerText = 'Get Started'
 
 //cta image
@@ -78,13 +94,62 @@ let ctaImg = cta.querySelector('img')
 ctaImg.src = "img/header-img.png"
 
 //main-content
+//top-content
+let topContent1 = document.querySelector('.top-content')
+let divOneH4 = topContent1.querySelector('.text-content:nth-of-type(1) h4')
+let divOneP = topContent1.querySelector('.text-content:nth-of-type(1) p')
+divOneH4.textContent = "Features"
+divOneP.textContent = "Features content elementum magna eros, ac posuere elvit tempus et. Suspendisse vel tempus odio, in interdutm nisi. Suspendisse eu ornare nisl. Nullam convallis augue justo, at imperdiet metus scelerisque quis."
+
+let topContent2 = document.querySelector('.top-content')
+let divTwoH4 = topContent2.querySelector('.text-content:nth-of-type(2) h4')
+let divTwoP = topContent2.querySelector('.text-content:nth-of-type(2) p')
+
+divTwoH4.textContent = "About"
+divTwoP.textContent = "About content elementum magna eros, ac posuere elvit tempus et. Suspendisse vel tempus odio, in interdutm nisi. Suspendisse eu ornare nisl. Nullam convallis augue justo, at imperdiet metus scelerisque quis."
+
+//img
+
+let topImg = document.querySelector('#middle-img')
+topImg.src = "img/mid-page-accent.jpg"
+
+//bottom-content
+let bottomContent = document.querySelector('.bottom-content')
+let botDivOneH4 = bottomContent.querySelector(".text-content:nth-of-type(1) h4")
+let botDivOneP = bottomContent.querySelector(".text-content:nth-of-type(1) p")
+botDivOneH4.textContent = "Service"
+botDivOneP.textContent = "Services content elementum magna eros, ac posuere elvit tempus et. Suspendisse vel tempus odio, in interdutm nisi. Suspendisse eu ornare nisl. Nullam convallis augue justo, at imperdiet metus scelerisque quis."
+
+let botDivTwoH4 = bottomContent.querySelector(".text-content:nth-of-type(2) h4")
+let botDivTwoP = bottomContent.querySelector(".text-content:nth-of-type(2) p")
+botDivTwoH4.textContent = "Product"
+botDivTwoP.textContent = "Product content elementum magna eros, ac posuere elvit tempus et. Suspendisse vel tempus odio, in interdutm nisi. Suspendisse eu ornare nisl. Nullam convallis augue justo, at imperdiet metus scelerisque quis."
+
+let botDivThreeH4 = bottomContent.querySelector(".text-content:nth-of-type(3) h4")
+let botDivThreeP = bottomContent.querySelector(".text-content:nth-of-type(3) p")
+botDivThreeH4.textContent = "Vision"
+botDivThreeP.textContent = "Services content elementum magna eros, ac posuere elvit tempus et. Suspendisse vel tempus odio, in interdutm nisi. Suspendisse eu ornare nisl. Nullam convallis augue justo, at imperdiet metus scelerisque quis."
+
+//contact
+let contact = document.querySelector('.contact')
+let contactH4 = contact.querySelector('h4')
+let contactP = contact.querySelectorAll('p')
+
+contactH4.textContent = "Contact"
+contactP[0].innerHTML = "123 Way 456 Street <br> Somewhere, USA"
+contactP[1].textContent = "1 (888) 888-8888"
+contactP[2].textContent = "sales@greatidea.io"
+
+//footer
+let footer = document.querySelector('footer')
+footer.textContent = "Copyright Great Idea! 2018"
 
 
 
 
 
 
-
+//lecture notes
 /*// USING THE DOM TO EDIT ELEMENTS ON THE PAGE (AND ADD NEW ONES)
 
 // 1- Finding an element on the page and saving a reference to it
